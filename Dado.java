@@ -7,7 +7,8 @@ public class Dado{
   }
 
   public void rolar(){
-    this.valor=random.nextInt(5)+1;
+    Random gerador=new Random();
+    this.valor=gerador.nextInt(5)+1;
   }
 
   public int mostrarDado(){
@@ -16,6 +17,5 @@ public class Dado{
 
   public String toString(){
     System.out.println(this.valor);
-    return this.valor;
   }
 }
