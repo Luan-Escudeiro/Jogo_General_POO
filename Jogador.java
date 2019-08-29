@@ -1,6 +1,6 @@
 public class Jogador{
   private String nome;
-  //private JogoGeneral jogo;
+  private JogoGeneral jogo;
 
   public void Jogador(){
   }

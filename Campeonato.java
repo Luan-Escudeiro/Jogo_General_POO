@@ -21,8 +21,12 @@ public class Campeonato{
   public static void incluirJogador(){
     System.out.println("\nInsira o nome do jogador: ");
     String nome=aux.next();
+    if(checaNome(nome)==true){
+      System.out.println("Nome já inserido.");
+      return;
+    }
     for(int i=0;i<5;i++){
-      if(jogadores[i]==null&&checaNome(nome)==false){
+      if(jogadores[i]==null){
         jogadores[i]=new Jogador();
         jogadores[i].setNome(nome);
         System.out.println("Inserido com sucesso");
@@ -33,6 +37,7 @@ public class Campeonato{
         return;
       }
     }
+
   }
 
   public static void removerJogador(){

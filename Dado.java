@@ -15,7 +15,4 @@ public class Dado{
     return this.valor;
   }
 
-  public String toString(){
-    System.out.println(this.valor);
-  }
 }
