@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Campeonato{
   private static Scanner aux = new Scanner(System.in);
   private static Jogador[] jogadores=new Jogador[5];
-  private static int verdade;
 
   public static boolean checaNome(String nome){
     String nome1;
@@ -61,6 +60,16 @@ public class Campeonato{
     }
   }
   public static void iniciar(){
+    for(int x=0;x<13;x++){
+      for(int i=0;i<5;i++){
+        if(jogadores[i]!=null){
+          System.out.println("Rolando dados para "+jogadores[i].getNome());
+          jogadores[i].rolarDados();
+          System.out.print("\nDados obtidos: ");
+          jogadores[i].mostrarDados();
+        }
+      }
+    }
   }
 
   public static void mostrar(){
